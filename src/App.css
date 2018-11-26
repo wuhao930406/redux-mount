@@ -1,0 +1,64 @@
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.ulist{
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+}
+.ulist li{
+  width: 92%;
+  padding: 12px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #ddd dashed 1px;
+}
+.ulist li span{
+  font-size: 16px;
+}
+.flexrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.row-enter {
+  transform: translate(100%);
+}
+
+.row-enter.row-enter-active {
+  transform: translate(0%);
+  transition: all 500ms ease-in;
+}
+
+.row-exit {
+  transform: translate(0%);
+}
+
+.row-exit.row-exit-active {
+  transform: translate(-100%);
+  transition: all 500ms ease-in;
+}
+
+.column-enter {
+  transform: translate(0,-100%);
+}
+
+.column-enter.column-enter-active {
+  transform: translate(0,0%);
+  transition: all 500ms ease-in;
+}
+
+.column-exit {
+  transform: translate(0,0%);
+}
+
+.column-exit.column-exit-active {
+  transform: translate(0,100%);
+  transition: all 500ms ease-in;
+}
+
+
