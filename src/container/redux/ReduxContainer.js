@@ -105,7 +105,6 @@ const mapDispatchToProps = ( dispatch ) => {
         onSwitchTxt: (name) => {
             dispatch({ type: 'CHANGE_TXT', text: name })
         },
-
     }
 }
 ReduxContainer = connect(mapStateToProps,mapDispatchToProps)(ReduxContainer)

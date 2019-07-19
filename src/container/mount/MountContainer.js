@@ -38,6 +38,13 @@ class MountContainer extends Component {
         this.setState({array:[],text:""});
     }
 
+    onRef = (ref) => {
+        this.child = ref
+    }
+    componentDidMount(){
+        console.log(this.child.state.a)
+        //this.child.sayhi()
+    }
 
     render () {
         let { array,text } = this.state;
@@ -90,7 +97,8 @@ class MountContainer extends Component {
 
                     </div>
                 </BorderCard>
-                <MountModule array={array} textSplice={this.textSplice} showIndex={this.showIndex}>
+
+                <MountModule onRef={ this.onRef } array={array} textSplice={this.textSplice} showIndex={this.showIndex}>
                 </MountModule>
             </div>
         )

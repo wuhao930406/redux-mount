@@ -8,11 +8,16 @@ import { AnimatedWrapper } from '../../components';
 
 
 class MountModule extends Component {
-    constructor(){
-        super();
-        this.state={}
+    constructor(props){
+        super(props);
+        this.state={
+            a:1
+        };
+        props.onRef(this);
     }
-
+    sayhi(){
+        alert("hi")
+    }
 
     render () {
         let {array,handleGetChild} = this.props;
@@ -20,7 +25,7 @@ class MountModule extends Component {
             return(
             <AnimatedWrapper key={i} classNames="column">
                 <li>
-                    <span  data-id={i} onClick={(e)=>{
+                    <span data-id={i} onClick={(e)=>{
                         this.props.showIndex(e);
                     }}>
                         {item}
